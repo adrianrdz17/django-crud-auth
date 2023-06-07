@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block content %}
+<main class="container mt-5">
+	<section class="text-center">
+		<h1 class="text-center">
+			El 'asesino del Zodiaco': más cerca de revelar su identidad
+		</h1>
+		<blockquote>
+			Los investigadores han descubierto un amplio abanico de armas y
+			balas, que el presunto asesino habría regalado a su círculo más
+			cercano antes de morir.
+		</blockquote>
+		{% load static %}
+		<img
+			src="{% static 'zodiac.jpg' %}"
+			alt="The Zodiac Killer"
+			width="700"
+		/>
+	</section>
+	<div class="text-justify">
+		<p class="text-justify">
+			El temido y famoso 'asesino del Zodiaco' se convirtió en el terror
+			del norte de California en los años 1968 y 1969 tras confesar el
+			asesinato de 37 personas a través de una carta, presuntamente
+			escrita por él. Sin embargo, policías e investigadores no han podido
+			hallar la identidad exacta de este asesino en serie tras casi 50
+			años de investigación, lo que se ha convertido en una incógnita a
+			resolver. Por ello, este icónico caso ha dado lugar a numerosos
+			libros, películas y documentales sobre la posible identidad de esta
+			persona.
+		</p>
+		<p>
+			Un grupo formado por un amplio abanico de detectives, periodistas y
+			oficiales de inteligencia militar, denominado The Case Breakers, han
+			confirmado la identificación de nuevas pistas que contrastan la
+			identidad del Asesino del Zodiaco con Gary Francis Poste, fallecido
+			a los 80 años, y que puede ser un punto de inflexión para conocer al
+			autor de estos crímenes en la segunda mitad del siglo XX.
+		</p>
+		<p>
+			Principalmente, se debe a que esta persona regaló a su círculo
+			cercano un paquete de armas y balas, antes de morir en el año 2018,
+			según especifican los especialistas. “Había regalado silenciosamente
+			sus armas, partes de pistolas, pólvora, balas, y casquillos de
+			proyectil a sus lugareños favoritos. La mayoría de estos obsequios
+			peculiares permanecen intactos en sótanos y armarios hasta
+			entonces”, ha matizado The Case Breakers.
+		</p>
+	</div>
+</main>
+{% endblock %}

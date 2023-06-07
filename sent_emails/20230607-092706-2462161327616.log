@@ -1,0 +1,36 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Reset your password
+From: garapower26@gmail.com
+To: hyper@gmail.com
+Date: Wed, 07 Jun 2023 15:27:06 -0000
+Message-ID: <168615162626.12720.16674406030897522136@ARod-Computer>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Restablecimiento de contraseña</title>
+	</head>
+	<body>
+		<h2>Hola hyper,</h2>
+		<p>
+			Hemos recibido una solicitud para restablecer la contraseña de tu
+			cuenta.
+		</p>
+		<p>
+			Para continuar con el proceso de restablecimiento de contraseña, haz
+			clic en el siguiente enlace:
+		</p>
+		<a href="http://localhost:3000/signin/accounts/reset/MTE/bpf3l6-0d4f01af99a357e679fea4f62e664029/">http://localhost:3000/signin/accounts/reset/MTE/bpf3l6-0d4f01af99a357e679fea4f62e664029/</a>
+		<p>
+			Si no has solicitado el restablecimiento de contraseña, puedes
+			ignorar este mensaje.
+		</p>
+		<p>Gracias,</p>
+		<p>Equipo de ejemplo</p>
+	</body>
+</html>
+
+-------------------------------------------------------------------------------

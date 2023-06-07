@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<main class="container">
+	<div class="row">
+		<div class="col-md-4 offset-md-4 pt-5">
+			<form method="post" class="card card-body mt-5">
+				<h1 class="text-center">Thank you!</h1>
+				<blockquote>{{error}}</blockquote>
+				<p>Your should receive the email shortly</p>
+				{{form.as_p}}
+				<button class="btn btn-primary">Send me instructions</button>
+			</form>
+		</div>
+	</div>
+</main>
+{% endblock %}

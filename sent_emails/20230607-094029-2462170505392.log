@@ -1,0 +1,36 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Reset your password
+From: garapower26@gmail.com
+To: nidis@gmail.com
+Date: Wed, 07 Jun 2023 15:40:29 -0000
+Message-ID: <168615242900.12720.8354308675991273907@ARod-Computer>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Restablecimiento de contraseña</title>
+	</head>
+	<body>
+		<h2>Hola nidis,</h2>
+		<p>
+			Hemos recibido una solicitud para restablecer la contraseña de tu
+			cuenta.
+		</p>
+		<p>
+			Para continuar con el proceso de restablecimiento de contraseña, haz
+			clic en el siguiente enlace:
+		</p>
+		<a href="http://localhost:3000/signin/accounts/reset/MTM/bpf47g-fd874b555dae1900df0e4b19a7ad7080/">http://localhost:3000/signin/accounts/reset/MTM/bpf47g-fd874b555dae1900df0e4b19a7ad7080/</a>
+		<p>
+			Si no has solicitado el restablecimiento de contraseña, puedes
+			ignorar este mensaje.
+		</p>
+		<p>Gracias,</p>
+		<p>Equipo de ejemplo</p>
+	</body>
+</html>
+
+-------------------------------------------------------------------------------
