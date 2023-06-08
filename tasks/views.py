@@ -13,6 +13,9 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -70,14 +73,18 @@ def signin(request):
         
 def resetpwd(request):
     if request.method == 'GET':
+        print (settings.EMAIL_HOST_USER)
+        print (settings.EMAIL_HOST_PASSWORD)
         return render(request, 'resetpwd.html',{
             'form': PasswordResetForm
         })
+    
     else:
         username = request.POST['username']
         try:
             user = User.objects.get(username=username)
-            print('El usuario si existe: ', user.email)
+            # print('El usuario si existe: ', user.email)
+            subject = 'Reset your password'
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
 
@@ -87,7 +94,18 @@ def resetpwd(request):
                 'username': user.username
             })
 
-            send_mail('Reset your password', message,'garapower26@gmail.com', [user.email] )
+            email = EmailMessage(
+                subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                [user.email]
+            )
+
+            email.fail_silently = False
+            email.send()
+            messages.success(request, 'Se ha enviado tu correo')
+
+            # send_mail('Reset your password', message,'garapower26@gmail.com', [user.email] )
 
             return render(request, 'resetpwd.html',{
                 'succesfull': 'Email recuperation is sending. Please check your email for further details'
