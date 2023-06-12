@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 import os
 import dj_database_url
 
@@ -84,8 +83,9 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost/postgres',        conn_max_age=600
+    'default':dj_database_url.config(
+        default='postgresql://postgres:postgres@localhost/postgres',        
+        conn_max_age=600
     )
 }
 
@@ -142,8 +142,8 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = 'smtp.gmail.com'  
 EMAIL_PORT = 587  # Puerto para el servidor SMTP
 EMAIL_USE_TLS = True  # Usar TLS para el cifrado
-EMAIL_HOST_USER = config('EMAIL')  # Dirección de correo electrónico desde la cual enviarás los mensajes
-EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
+EMAIL_HOST_USER = os.environ.get('EMAIL')  # Dirección de correo electrónico desde la cual enviarás los mensajes
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

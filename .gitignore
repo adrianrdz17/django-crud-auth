@@ -2,5 +2,5 @@ db.sqlite3
 .gitignore
 venv
 sent_emails
-__pycache__
+/__pycache__
 .env
