@@ -88,7 +88,7 @@ def resetpwd(request):
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
 
-            reset_url=f'http://localhost:3000/signin/accounts/reset/{uid}/{token}/'
+            reset_url=f'https://django-auth-crud-86x8.onrender.com/signin/accounts/reset/{uid}/{token}/'
             message = render_to_string('email/reset_password.html', {
                 'reset_url': reset_url,
                 'username': user.username
